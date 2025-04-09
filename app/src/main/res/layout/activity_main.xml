@@ -31,7 +31,7 @@
             android:id="@+id/editParticipants"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/participants_comma_separated"
+            android:hint="@string/participants"
             android:inputType="textMultiLine"
             android:layout_marginBottom="8dp"/>
 
