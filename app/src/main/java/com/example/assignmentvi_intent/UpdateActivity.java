@@ -50,6 +50,7 @@ public class UpdateActivity extends AppCompatActivity {
 
 
         btnFound.setOnClickListener(v -> {
+            showMeeting.setText("");
             String title = searchTitle.getText().toString();
             String place = searchPlace.getText().toString();
             List<String> participantsArray = Arrays.asList(searchParticipant.getText().toString().split(","));
@@ -65,13 +66,13 @@ public class UpdateActivity extends AppCompatActivity {
             foundMeetings = MeetingManager.searchMeeting(title, place, date, time, participants);
 
             if (!foundMeetings.isEmpty()) {
-                for (Meeting meeting : foundMeetings) {
-                    showMeeting.setText("Title: " + meeting.getTitle() + "\n"
-                            + "Place: " + meeting.getPlace() + "\n"
-                            + "Participants: " + meeting.getParticipants() + "\n"
-                            + "Date: " + meeting.getDate() + "\n");
 
-                }
+                    showMeeting.setText("Title: " + foundMeetings.get(0).getTitle() + "\n"
+                            + "Place: " + foundMeetings.get(0).getPlace() + "\n"
+                            + "Participants: " + foundMeetings.get(0).getParticipants() + "\n"
+                            + "Date: " + foundMeetings.get(0).getDate() + "\n");
+
+
             }
         });
 

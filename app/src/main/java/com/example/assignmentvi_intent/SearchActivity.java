@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -44,7 +45,7 @@ public class SearchActivity extends AppCompatActivity {
             String time = searchTime.getText().toString();
 
             if (title.isEmpty() && place.isEmpty() && participants.isEmpty() && date.isEmpty() && time.isEmpty()){
-                resultText.setText("Please enter at least one search criteria.");
+                Toast.makeText(this, "Please enter at least one search parameter.", Toast.LENGTH_SHORT).show();
                 return;
             }
 

@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity{
             Meeting meeting = new Meeting(title, place, participants, date, time);
             MeetingManager.addMeeting(meeting);
 
-            Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
-            startActivity(intent);
         });
 
         btn_summary.setOnClickListener(view -> {

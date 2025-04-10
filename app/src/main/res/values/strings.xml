@@ -12,12 +12,24 @@
     <string name="title">Title</string>
     <string name="search">Search</string>
     <string name="place">Place</string>
-    <string name="participants_comma_separated">Participants (comma-separated)</string>
+    <string name="participants">Participants (comma-separated)</string>
     <string name="date_e_g_2025_04_07">Date (e.g. 2025-04-07)</string>
     <string name="time_e_g_14_00">Time (e.g. 14:00)</string>
     <string name="submit">Submit</string>
     <string name="summary">Summary</string>
     <string name="update">Update</string>
-
+    <string name="search_title">Search By Title</string>
+    <string name="search_by_place">Search by place:</string>
+    <string name="search_by_participants">Search by participants</string>
+    <string name="search_by_date">search by date</string>
+    <string name="search_by_time">search by time</string>
+    <string name="search_meeting_to_update">Search Meeting to update</string>
+    <string name="find_meeting_to_update">find meeting to update</string>
+    <string name="new_title">New Title</string>
+    <string name="save_changes">save changes</string>
+    <string name="new_place">New Place</string>
+    <string name="new_participants">New Participants</string>
+    <string name="new_date">New Date</string>
+    <string name="new_time">New Time</string>
 
 </resources>
