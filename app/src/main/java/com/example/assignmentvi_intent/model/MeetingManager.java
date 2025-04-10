@@ -28,18 +28,18 @@ public class MeetingManager {
             if (participants.isEmpty()) {
                 participantsMatch = true;
             } else {
-                // Convert both to lowercase for case-insensitive comparison
                 List<String> meetingParticipantsLower = new ArrayList<>();
                 for (String p : meeting.getParticipants()) {
                     meetingParticipantsLower.add(p.toLowerCase().trim());
                 }
 
-                List<String> searchParticipantsLower = new ArrayList<>();
+                participantsMatch = false;
                 for (String p : participants) {
-                    searchParticipantsLower.add(p.toLowerCase().trim());
+                    if (meetingParticipantsLower.contains(p.toLowerCase().trim())) {
+                        participantsMatch = true;
+                        break;
+                    }
                 }
-
-                participantsMatch = meetingParticipantsLower.containsAll(searchParticipantsLower);
             }
 
             if (titleMatch && placeMatch && dateMatch && timeMatch && participantsMatch) {

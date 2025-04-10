@@ -39,7 +39,13 @@ public class SearchActivity extends AppCompatActivity {
 
             String participantsText = searchParticipant.getText().toString();
             List<String> participantsArray = Arrays.asList(participantsText.split(","));
-            List<String> participants = new ArrayList<>(participantsArray);
+            List<String> participants = new ArrayList<>();
+
+            for (String p : participantsArray) {
+                if (!p.trim().isEmpty()) {
+                    participants.add(p.trim());
+                }
+            }
 
             String date = searchDate.getText().toString();
             String time = searchTime.getText().toString();
